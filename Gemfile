@@ -53,11 +53,20 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'devise'
-gem 'kaminari','~> 1.2.1'
+# tzinfo-data gem is necessary for Windows platforms
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
- gem 'net-smtp'
- gem 'image_processing', '~> 1.2'
- gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# Devise for authentication
+gem 'devise'
+
+# Kaminari for pagination
+gem 'kaminari', '~> 1.2.1'
+
+# Net-SMTP for email sending
+gem 'net-smtp'
+
+# Image processing for handling images
+gem 'image_processing', '~> 1.2'
+
 
 
